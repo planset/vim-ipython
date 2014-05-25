@@ -116,6 +116,8 @@ def km_from_string(s=''):
     such as '--shell=47378 --iopub=39859 --stdin=36778 --hb=52668' for IPython 0.11
     or just 'kernel-12345.json' for IPython 0.12
     """
+    if s.strip() == '':
+        s = '*'
     from os.path import join as pjoin
     try:
         import IPython
